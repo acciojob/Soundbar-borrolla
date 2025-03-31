@@ -2,17 +2,25 @@
 body{
 	background-color: rgb(161, 100, 223);
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	overflow: hidden;
 	margin : 0;
 	 
 }
 
-.buttons{
-	display: flex;
-	gap: 20px;
+.btn, .stop{
+	background-color: rebeccapurple;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+	margin: 1rem;
+	padding: 1.5rem 3rem;
+	cursor: poniter;
 }
+
 
 button{
 	background-color: #2c2c54;
@@ -25,24 +33,10 @@ button{
 	transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.btn:hover{
-	background-color: #575fcf; /*   lighter hover effect         */
-	transform: scale(1.1); /*slight scaling on hover
-	*/
+.btn:hover, .stop:hover{
+	opacity:0.5;
 }
 
-.stop{
-	background-color: #575fcf;
+.btn:focus, .stop:focus{
+	outline: none;
 }
-
-.stop:hover{
-	background-color: #575fcf;
-}
-
-
-
-
-
-
-
-
