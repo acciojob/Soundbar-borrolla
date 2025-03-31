@@ -16,7 +16,7 @@ buttons{
 	gap: 10px;
 }
 
-.btn .stop{
+.btn, .stop{
 	padding: 10px 20px;
 	font-size: 16px;
 	border-radius: 10px;
