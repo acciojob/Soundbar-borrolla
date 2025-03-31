@@ -1,11 +1,12 @@
 /*  your css code here. If applicable */
 body{
+	background-color: rgb(161, 100, 223);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	margin : 0;
-	background-color: blueViolet; 
+	 
 }
 
 .buttons{
