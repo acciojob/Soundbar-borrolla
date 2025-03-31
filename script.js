@@ -1,27 +1,25 @@
 //your JS code here. If required.
-const buttons = document.querySelectorAll(".btn");
-const stopbutton = document.queryselector(".stop");
+//const buttons = document.querySelectorAll(".btn");
+//const stopbutton = document.queryselector(".stop");
 
-let currentAudio;
+let currentSound = null; // This will hold the current playing sound
 
-///add event listener to each button
-buttons.forEach((button, index) => {
-	button.addEventListener("click", () => {
-		if (currentAudio) {
-      currentAudio.pause();
-      currentAudio.currentTime = 0;
-    }
-    // Play the new sound
-    currentAudio = new Audio(`sounds/${soundName}.mp3`);
-    currentAudio.play();
-	});
-});
-
-stopButton.addEventListener("click", () => {
-	if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.currentTime = 0; // Reset the audio's play position
+function playSound(soundName) {
+  // If there is a sound already playing, stop it
+  if (currentSound) {
+    currentSound.pause();
+    currentSound.currentTime = 0; // This resets the sound to the beginning
   }
-});
 
+  // Create a new audio object and start playing the sound
+  currentSound = new Audio(`sounds/${soundName}.mp3`);
+  currentSound.play();
+}
 
+function stopAllSounds() {
+  // If there is a sound playing, stop it
+  if (currentSound) {
+    currentSound.pause();
+    currentSound.currentTime = 0; // This resets the sound to the beginning
+  }
+}
