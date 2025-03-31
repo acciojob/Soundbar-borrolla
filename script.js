@@ -23,8 +23,8 @@ const playSound = (sound) => {
 
 
 //add event listener to buttons
-object.keys(sounds).forEach((key) => {
-	document.getElementById(key).addEventListener('click', () => playSounds[key]));      
+Object.keys(sounds).forEach((key) => {
+	document.getElementById(key).addEventListener('click', () => playSound(sounds[key]));      
 });
 
 //stop button functionality
