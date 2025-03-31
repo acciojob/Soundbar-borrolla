@@ -34,7 +34,7 @@ buttons{
     color: white;
 }
 .btn:hover {
-    background-color: #0056b3;
+    background-color: grey;
 	transform: scale(1.1); /* Adds a hover effect */
 }
 
@@ -44,6 +44,6 @@ buttons{
 }
 
 .stop:hover {
-    background-color: #a71d2a;
+    background-color: grey;
 	transform: scale(1.1); /* Adds a hover effect */
 }
