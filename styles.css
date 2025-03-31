@@ -1,6 +1,6 @@
 /*  your css code here. If applicable */
 body{
-	font-display: Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
