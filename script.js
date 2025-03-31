@@ -13,3 +13,9 @@ document.querySelector('.stop').addEventListener('click', function() {
   var sounds = document.getElementsByTagName('audio');
   for(i=0; i<sounds.length; i++) sounds[i].pause();
 });
+
+
+
+
+
+
