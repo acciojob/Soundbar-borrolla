@@ -10,23 +10,38 @@ const sounds = {
 	wrong : 'sounds/wrong.mp3',
 };
 
-//function to play sound
+let currentAudio  = null;
+
 const playSound = (sound) => {
-	const audio = new Audio(sound);
-	audio.play();
+	if(currentAudio) {
+		currentAudio.pause();
+		currentAudio.currentTime = 0;//rest audio 
+	}
+	currentAudio  = new Audio(sound);
+	currentAudio.play();
 };
 
-//add event listener to buttons
-Object.keys(sounds).forEach(key) => {
-	document.getElementById(key).addEventListener('click', () => playSound(sounds[key]));
-});
 
+//add event listener to buttons
+object.keys(sounds).forEach((key) => {
+	document.getElementById(key).addEventListener('click', () => playSounds[key]));      
+});
 
 //stop button functionality
 document.getElementById('stop').addEventListener('click', () => {
-	const audioElements = document.querySelectorAll('audio');
-	audioElements.forEach(audio) => audio.pause());
+	if(currentAudio)
+	{
+		currentAudio.pause();
+		currentAudio.currentTime = 0; //Reset audio
+		currentAudio = null;
+	}
 });
+
+
+
+
+
+
 
 
 
