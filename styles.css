@@ -1,50 +1,32 @@
 /*  your css code here. If applicable */
 body{
-	font-family: Arial, sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background-color: blueviolet;
-	margin: 0;
+	margin : 0;
+	background-color: blueViolet; 
 }
 
-buttons{
+.button-container{
 	display: flex;
-	flex-direction: column;
-	align-items: center;
 	gap: 20px;
 }
 
-.btn, .stop{
-	padding: 10px 20px;
-	font-size: 16px;
-	border-radius: 5px;
-	border: 2px solid #333;
-	cursor: pointer;
+button{
+	background-color: #2c2c54;
+	color: white;
 	border: none;
+	padding: 15px 30px;
+	font-size: 15px;
 	border-radius: 5px;
-	transition: background-color 0.3s transform 0.2s;
+	cursor: pointer;
+	transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-
-.btn {
-    background-color: #1235;
-    color: white;
+button:hover{
+	background-color: #575fcf; /*   lighter hover effect         */
+	transform: scale(1.1); /*slight scaling on hover
+	*/
 }
-.btn:hover {
-    background-color: grey;
-	transform: scale(1.1); /* Adds a hover effect */
-}
-
-.stop {
-    background-color: #1235;
-    color: white;
-}
-
-.stop:hover {
-    background-color: grey;
-	transform: scale(1.1); /* Adds a hover effect */
-}
-
 
