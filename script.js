@@ -1,7 +1,9 @@
 //your JS code here. If required.
 //const buttons = document.querySelectorAll(".btn");
 //const stopbutton = document.queryselector(".stop");
-	const btns = Array.form(document.querySelectorAll(".btn"));
+
+const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong', 'stop'];
+	const btns = Array.from(document.querySelectorAll(".btn"));
 console.log(btns);
 
 
