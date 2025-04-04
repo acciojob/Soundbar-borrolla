@@ -2,42 +2,35 @@
 //const buttons = document.querySelectorAll(".btn");
 //const stopbutton = document.queryselector(".stop");
 
-const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong', 'stop'];
+const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong'];
 	const btns = Array.from(document.querySelectorAll(".btn"));
 console.log(btns);
 
+function playSounds(btn){
+	btn.addEventListener('click', () => {
+		const label= btn,innexrText.trim().toLowerCase();
 
-function playSounds(btn) {
-    btn.addEventListener('click', () => {
-		stopSound();
-		documnet.getElementById(btn.innerText).play();
-	})
+		stopSounds();
+	    if(label === 'stop') return;
+	 const sound = document.getElementById(label);
+	if(sound) sound.play();
+	});
 }
 
-function stopSounds(param) {
-	for(let i=0; i<btns.length; i++)
+function stopSounds(){
+	sounds.forEach(id => {
+		const sound = document.getElementById(id);
+		if(sound)
 		{
-			const sound = document.getElementById(btns[i].innerText);
-			console.log({sound});
 			sound.pause();
 			sound.currentTime = 0;
 		}
+	});
 }
 
-  for(let i=0; i<btns.length; i++)
-	  {
-		  playSounds(btns[i]);
-	  }
 
-document.querySelector(".stop").addEventListener('click', () => {
-	stopSounds();
-})
-
-
-
-
-
-
+// Attach event listeners to all buttons
+btns.forEach(playSounds);
 
 
 
