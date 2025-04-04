@@ -9,7 +9,7 @@ const stopBtn = document.querySelector(".stop");
 
 function playSounds(btn){
 	btn.addEventListener('click', () => {
-		const label= btn,innexrText.trim().toLowerCase();
+		const label= btn.innexrText.trim().toLowerCase();
 
 		stopSounds();
 	    if(label === 'stop') return;
@@ -32,6 +32,7 @@ function stopSounds(){
 
 // Attach event listeners to all buttons
 btns.forEach(playSounds);
+stopBtn.addEventListener("click", stopSounds);
 
 
 
