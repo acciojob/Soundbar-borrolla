@@ -3,20 +3,9 @@
 //const stopbutton = document.queryselector(".stop");
 
 const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong'];
-	const btns = Array.from(document.querySelectorAll(".btn"));
+const btns = Array.from(document.querySelectorAll(".btn"));
 const stopBtn = document.querySelector(".stop");
 
-
-function playSounds(btn){
-	btn.addEventListener('click', () => {
-		const label= btn.innexrText.trim().toLowerCase();
-
-		stopSounds();
-	    if(label === 'stop') return;
-	 const sound = document.getElementById(label);
-	if(sound) sound.play();
-	});
-}
 
 function stopSounds(){
 	sounds.forEach(id => {
@@ -29,11 +18,25 @@ function stopSounds(){
 	});
 }
 
+function playSounds(btn){
+	btn.addEventListener('click', () => {
+		const label= btns.innexrText.trim().toLowerCase();
+		stopSounds();
+		
+	    if(label === 'stop') return;
+	 const sound = document.getElementById(label);
+	if(sound) 
+		sound.play();
+	});
+}
+
 
 // Attach event listeners to all buttons
-btns.forEach(playSounds);
-stopBtn.addEventListener("click", stopSounds);
-
+// btns.forEach(playSounds);
+// stopBtn.addEventListener("click", stopSounds);
+if (stopBtn) {
+  stopBtn.addEventListener('click', stopSounds);
+}
 
 
 
