@@ -4,7 +4,8 @@
 
 const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong'];
 	const btns = Array.from(document.querySelectorAll(".btn"));
-console.log(btns);
+const stopBtn = document.querySelector(".stop");
+
 
 function playSounds(btn){
 	btn.addEventListener('click', () => {
